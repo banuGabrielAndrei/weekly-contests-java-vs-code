@@ -1,6 +1,5 @@
 package week93;
 
-import java.io.File;
 import java.util.Scanner;
 
 public class Problem3 {
@@ -9,21 +8,23 @@ public class Problem3 {
         var scanner = new Scanner(System.in);
         while (scanner.hasNextLine()) {
             String text = scanner.nextLine();
-            // System.out.println(text);
-            if (text.equals("aa")) {
-                break;
-            }
             var newText = new StringBuilder();
             newText.append(text);
             for (int i = 0; i < newText.length(); ++i) {
-                char currentChar = newText.charAt(i);
-                if (!isVowel(currentChar) && Character.isLetter(currentChar)) {
-                    Character.toLowerCase(currentChar);
-                    char newChar = (char) ('z' - (Character.toLowerCase(currentChar) - 'a'));
-                    newText.setCharAt(i, newChar);
+                if (Character.isLetter(newText.charAt(i))) {
+                    if (isVowel(newText.charAt(i))) {
+                        newText.setCharAt(i, nrVowel(newText.charAt(i)));
+                    } else {
+                        char aux;
+                        if (Character.isUpperCase(newText.charAt(i))) {
+                            aux = (char) ('Z' - (Character.toUpperCase(newText.charAt(i)) - 'A'));
+                        } else {
+                            aux = (char) ('z' - (Character.toLowerCase(newText.charAt(i)) - 'a'));
+                        }
+                        newText.setCharAt(i, Character.toLowerCase(aux));
+                    }
                 }
             }
-
             System.out.println(newText);
         }
         scanner.close();
@@ -32,6 +33,10 @@ public class Problem3 {
     public static boolean isVowel(char ch) {
         String vowels = "aeiouAEIOU";
         return vowels.contains(String.valueOf(ch));
+    }
+
+    public static boolean isUpper(char ch) {
+        return 'A' <= ch && ch <= 'Z';
     }
 
     public static char nrVowel(char ch) {

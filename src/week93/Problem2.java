@@ -18,6 +18,7 @@ public class Problem2 {
                 v[index++] = nr;
             }
         }
+        scanner.close();
         for (int j = 0; j < index; ++j) {
             sum += v[j];
         }
