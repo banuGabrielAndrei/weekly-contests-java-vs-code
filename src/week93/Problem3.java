@@ -1,11 +1,13 @@
 package week93;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Problem3 {
 
-    public static void main(String[] args) {
-        var scanner = new Scanner(System.in);
+    public static void main(String[] args) throws FileNotFoundException {
+        var scanner = new Scanner(new File("C:\\VS CODE  JAVA\\week 92\\src\\week93\\text.in"));
         while (scanner.hasNextLine()) {
             String text = scanner.nextLine();
             var newText = new StringBuilder();
@@ -25,7 +27,9 @@ public class Problem3 {
                     }
                 }
             }
-            System.out.println(newText);
+            if (!newText.isEmpty()) {
+                System.out.println(newText);
+            }
         }
         scanner.close();
     }
