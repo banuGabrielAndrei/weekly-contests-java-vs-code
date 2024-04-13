@@ -8,6 +8,27 @@
       "type": "java",
       "name": "Problem3",
       "request": "launch",
+      "mainClass": "week102.Problem3",
+      "projectName": "week 92_1edde190"
+    },
+    {
+      "type": "java",
+      "name": "Problem2",
+      "request": "launch",
+      "mainClass": "week102.Problem2",
+      "projectName": "week 92_1edde190"
+    },
+    {
+      "type": "java",
+      "name": "Problem1",
+      "request": "launch",
+      "mainClass": "week102.Problem1",
+      "projectName": "week 92_1edde190"
+    },
+    {
+      "type": "java",
+      "name": "Problem3",
+      "request": "launch",
       "mainClass": "week99.Problem3",
       "projectName": "week 92_1edde190"
     },
