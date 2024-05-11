@@ -1,18 +1,15 @@
 package week100;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Problem3 {
-    static String[] notes = new String[5 * 5];
-    static String vowels = "aeiou";
-    static int indexNotes = 0;
 
-    public static void main(String[] args) throws FileNotFoundException {
-        var scanner = new Scanner(new File("C:\\VS CODE  JAVA\\week 92\\src\\week100\\input.txt"));
+    static String vowels = "aeiou";
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
         Map<String, Integer> noteCnt = new HashMap<>();
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
@@ -45,7 +42,6 @@ public class Problem3 {
         for (Map.Entry<String, Integer> entry : noteCnt.entrySet()) {
             int count = entry.getValue();
             String note = entry.getKey();
-            System.out.println(note + " " + count + " " + freqNote);
             if (count > maxi || (count == maxi && note.compareTo(freqNote) < 0)) {
                 maxi = count;
                 freqNote = note;

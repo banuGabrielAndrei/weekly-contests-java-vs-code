@@ -1,3 +1,5 @@
+package week92;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -22,7 +24,7 @@ public class Problem1 {
         if (isValid) {
             System.out.println("CONSECUTIVE");
         } else {
-            System.out.println();
+            System.out.println("NU");
         }
     }
 }

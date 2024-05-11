@@ -1,12 +1,10 @@
 package week102;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Problem3 {
-    public static void main(String[] args) throws FileNotFoundException {
-        var scanner = new Scanner(new File("src\\week102\\input.txt"));
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
         String[] words = new String[2001];
         int index = 0;
         while (scanner.hasNextLine()) {
