@@ -6,11 +6,12 @@ import java.util.Scanner;
 
 public class Problem3 {
     public static void main(String[] args) throws FileNotFoundException {
-        var scanner = new Scanner(new File("src\\week111\\input.txt"));
+        var scanner = new Scanner(new File("C:\\VS CODE  JAVA\\week 92\\src\\week111\\input.txt"));
         String text = "";
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             text += line;
+            System.out.println(text);
         }
         text += ".";
         boolean res = false;

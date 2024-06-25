@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Problem2",
+      "request": "launch",
+      "mainClass": "week112.Problem2",
+      "projectName": "weekly contests Wellcode_1c8399d5"
+    },
+    {
+      "type": "java",
+      "name": "Problem3",
+      "request": "launch",
+      "mainClass": "week112.Problem3",
+      "projectName": "weekly contests Wellcode_1c8399d5"
+    },
+    {
+      "type": "java",
+      "name": "Problem1",
+      "request": "launch",
+      "mainClass": "week112.Problem1",
+      "projectName": "weekly contests Wellcode_1c8399d5"
+    },
+    {
+      "type": "java",
       "name": "Problem3",
       "request": "launch",
       "mainClass": "week112.Problem3",

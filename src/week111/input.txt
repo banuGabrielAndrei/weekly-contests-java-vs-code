@@ -1,2 +1,5 @@
-AnimaL…est
-VesT *Nord
+1 ≤ lungimea textului ≤ 2000
+-100 000 000 000 ≤ valoarea unui număr din text ≤ 100 000 000 000
+Se garantează că în text se vor afla doar numere întregi valide.
+Un număr este determinat de o succesiune de cifre.
+Se garantează că, în cazul existenței unui număr negativ, nu va exista mai mult de un caracter '-' înainte de numărul negativ. De exemplu, numărul -1000 poate apărea in text, însă, --1000 sau ---1000, nu.

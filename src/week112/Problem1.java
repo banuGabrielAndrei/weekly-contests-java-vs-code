@@ -9,12 +9,9 @@ public class Problem1 {
         int b = scanner.nextInt();
         int c = scanner.nextInt();
         if (10 <= a && a <= 99) {
-            System.out.print(b);
-            System.out.print(a);
-            System.out.print(c);
+            System.out.println(b + "" + a + "" + c);
         } else {
-            System.out.print(b);
-            System.out.print(a);
+            System.out.println(b + "" + a);
         }
         scanner.close();
     }

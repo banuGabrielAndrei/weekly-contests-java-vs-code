@@ -7,41 +7,37 @@ public class Problem2 {
         var scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] v = new int[n];
-        int[] res = new int[n + 1];
-        for (int i = 0; i < n; ++i) {
+        StringBuilder[] palindroms = new StringBuilder[n];
+        for (int i = 0; i < n; ++i) {; 
             v[i] = scanner.nextInt();
-        }
-        int index = 0;
-        for (int i = 0; i < n; ++i) {
-            if (isPalindrome(v[i])) {
-                int copyNr = 0;
-                while (v[i] != 0) {
-                    if ((v[i] % 10) % 2 == 0) {
-                        copyNr = copyNr * 10 + 0;
-                    } else {
-                        copyNr = copyNr * 10 + v[i] % 10;
-                    }
-                    v[i] /= 10;
-                    
-                }
-                res[++index] = copyNr;
-            } else {
-                res[++index] = v[i];
-            }
+            palindroms[i] = new StringBuilder();
+            palindroms[i].append(v[i]);
         }
         scanner.close();
-        for (int j = index; j >= 1; --j) {
-            System.out.print(res[j] + " ");
+        for (int i = 0; i < palindroms.length; ++i) {
+            if (isPalindrome(palindroms[i])) {
+                palindroms[i] = changedNumber(palindroms[i]);
+            }
+        }
+        for (int j = palindroms.length - 1; j >= 0; --j) {
+            System.out.print(palindroms[j] + " ");
         }
     }
 
-    public static boolean isPalindrome(int nr) {
-        int inverse = 0;
-        int number = nr;
-        while (nr != 0) {
-            inverse = inverse * 10 + nr % 10;
-            nr /= 10;
+    public static boolean isPalindrome(StringBuilder number) {
+        String nr = number.toString();
+        String reversedNr = number.reverse().toString();
+        number.reverse();
+        return nr.equals(reversedNr);
+    }
+
+    public static StringBuilder changedNumber(StringBuilder nr) {
+        for (int i = 0; i < nr.length(); ++i) {
+            int digit = nr.charAt(i) - '0';
+            if (digit % 2 == 0) {
+                nr.setCharAt(i, '0');
+            }
         }
-        return number == inverse;
+        return nr;
     }
 }
