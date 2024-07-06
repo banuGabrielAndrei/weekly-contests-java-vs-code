@@ -9,6 +9,7 @@ import java.util.Set;
 public class Problem3 {
     public static void main(String[] args) throws FileNotFoundException{
         String[] lines = new String[1001];
+        @SuppressWarnings({ "rawtypes", "unchecked" })
         Set<String> res = new LinkedHashSet();
         int index = 0;
         var scanner = new Scanner(new File("src\\wekk113\\input.txt"));
