@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Problem3",
+      "request": "launch",
+      "mainClass": "week131.Problem3",
+      "projectName": "weekly contests Wellcode_1c8399d5"
+    },
+    {
+      "type": "java",
       "name": "Problem2",
       "request": "launch",
       "mainClass": "week115.Problem2",
