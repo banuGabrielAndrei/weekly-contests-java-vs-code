@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Problem3 {
     public static void main(String[] args) throws FileNotFoundException {
-        var scanner = new Scanner(new File("src\\input.txt"));
+        var scanner = new Scanner(new File("src\\week151\\input.txt"));
         String text = "";
         while (scanner.hasNext()) {
             text += scanner.nextLine();
