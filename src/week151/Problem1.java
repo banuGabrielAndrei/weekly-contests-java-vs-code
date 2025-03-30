@@ -31,6 +31,8 @@ public class Problem1 {
     }
 }
 
+//checking github
+
 /*
  * PROBLEM STATEMENT
  * După doar câteva zile petrecute în internship la compania locală de IT, ai
