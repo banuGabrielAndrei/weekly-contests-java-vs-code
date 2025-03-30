@@ -45,6 +45,8 @@ public class Problem2 {
     }
 }
 
+
+//gitchecking
 /*
  * PROBLEM STATEMENT
  * Cu ocazia weekend-ului prelungit, tu și cei n - 1 verișori de-ai tăi v-ați
